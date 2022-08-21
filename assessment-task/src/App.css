@@ -1,0 +1,264 @@
+.App{
+  background-image: url("Image/Vector 55.png");
+  background-size: 100% 65%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container{
+  margin: auto;
+  width: 40%;
+  max-width: 1100px;
+}
+
+.Header{
+  padding: 2em 0;
+}
+
+h1{
+  color: #4E598C;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.Header p{
+  color: #BDBDBD;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.details-sctn{
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 1;
+  justify-content: space-between;
+  padding: 2em 0;
+}
+
+.orange-text{
+  position: relative;
+}
+
+.orange-text p{
+  color: #F2994A !important;
+}
+
+.orange-line, .orange-line-one, .orange-line-two{
+  height: 6px;
+  width: 130px;
+  position: absolute;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #F2994A;
+  border-radius: 50px;
+}
+
+.orange-line-one{
+  width: 120px;
+}
+
+.orange-line-two{
+  width: 170px;
+}
+
+input{
+  padding: .75em;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #4E598C;
+  margin: 1em 0;
+}
+
+input::placeholder{
+  color: #000;
+}
+
+.receipt-info{
+  color: #817E9E;
+  margin: .5em 0;
+}
+
+label{
+  font-weight: 700;
+  color: #000;
+}
+
+.required::after{
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
+.location{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.next-btn{
+  background: linear-gradient(180deg, #F2C94C 0%, #F2994A 100%);
+  padding: .75em;
+  color: #FFF;
+  border: none;
+  width: 150px;
+  border-radius: 6px;
+  margin: 1.5em 0 0 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cancel-pymt{
+  margin-left: 4em;
+  color: #4E598C;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card-details{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-column-gap: 40px;
+}
+
+.purchase-container{
+  background-color: white;
+  box-shadow: 0px 10px 15px rgba(33, 30, 67, 0.08);
+  padding: 1em 0;
+}
+
+.blue-section{
+  background-color: #2F80ED;
+  border-radius: 8px 8px 0 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  color: #FFF;
+}
+
+.table-row{
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-row p{
+  color: #4E598C;
+}
+
+.purchase-container hr{
+  width: 90%;
+  margin: auto;
+}
+
+.zero-amount{
+  color: #000 !important;
+}
+
+.amount{
+  font-weight: 700;
+}
+
+.total-box{
+  border: 1px solid #4E598C;
+  display: flex;
+  justify-content: space-between;
+  padding: .75em;
+  width: 80%;
+  margin: 1em auto;
+  color: #4E598C;
+}
+
+.last-modal{
+  background-color: #FFF;
+  box-shadow: 0px 6px 10px rgba(33, 30, 67, 0.08);
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+.image-div{
+  display: flex;
+  justify-content: center;
+}
+
+.done-icon{
+  background-color: #FFF;
+  box-shadow: 0px 6px 10px rgba(33, 30, 67, 0.08);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 1em;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.last-modal h1{
+  margin: .5em 0;
+  font-size: 30px;
+}
+
+.last-modal p{
+  margin: 1em 0;
+}
+
+h3{
+  color: #F2994A;
+  text-decoration: underline;
+  margin: 1em 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px){
+  .container{
+    width: 80%;
+  }
+  .Header p{
+    font-size: 1rem;
+  }
+  input{
+    width: 90%;
+  }
+  .cancel-pymt{
+    margin-left: .5em;
+  }
+  .card-details{
+    grid-gap: 20px;
+  }
+  .orange-line, .orange-line-one{
+    width: 100px;
+  }
+  .orange-line-one{
+    margin-left: -6px;
+  }
+  .orange-line-two{
+    width: 140px;
+  }
+  .card-details label{
+    font-size: .85rem;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .Header p{
+    font-size: .9rem;
+  }
+  .orange-line-one{
+    margin-left: -6px;
+  }
+  .orange-line-two{
+    width: 130px;
+    margin-left: -3px;
+  }
+  .location{
+    box-sizing: border-box;
+    width: 90%;
+  }
+  .card-details{
+    box-sizing: border-box;
+    width: 90%;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
