@@ -26,13 +26,15 @@ export default function Billing(){
                     <label className="required">Card details</label>
                     <input type={"text"} placeholder="44960 44960 44960 44960"/>
                 </div>
-                <div>
-                    <label className="required">Expiry Date</label>
-                    <input type={"text"} placeholder="04/23"/>
-                </div>
-                <div>
-                    <label className="required label">CVV</label>
-                    <input type={"text"} placeholder="923"/>
+                <div className="expiry-ish">
+                    <div>
+                        <label className="required">Expiry Date</label>
+                        <input type={"text"} placeholder="04/23"/>
+                    </div>
+                    <div>
+                        <label className="required label">CVV</label>
+                        <input type={"text"} placeholder="923"/>
+                    </div>
                 </div>
             </div>
             <Link to="/payment"><button className="next-btn">Next</button></Link> 

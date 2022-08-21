@@ -11,6 +11,7 @@
   margin: auto;
   width: 40%;
   max-width: 1100px;
+  padding-bottom: 1em;
 }
 
 .Header{
@@ -118,8 +119,16 @@ label{
 
 .card-details{
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
+  box-sizing: border-box;
+}
+
+.expiry-ish{
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  box-sizing: border-box;
 }
 
 .purchase-container{
@@ -235,8 +244,14 @@ h3{
   .orange-line-two{
     width: 140px;
   }
-  .card-details label{
-    font-size: .85rem;
+  .card-details{
+    box-sizing: border-box;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  .expiry-ish{
+    box-sizing: border-box;
+    grid-column-gap: 20px;
   }
 }
 
@@ -246,19 +261,14 @@ h3{
   }
   .orange-line-one{
     margin-left: -6px;
+    width: 90px;
   }
   .orange-line-two{
-    width: 130px;
+    width: 120px;
     margin-left: -3px;
   }
   .location{
     box-sizing: border-box;
-    width: 90%;
-  }
-  .card-details{
-    box-sizing: border-box;
-    width: 90%;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }

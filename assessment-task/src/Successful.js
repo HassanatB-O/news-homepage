@@ -10,7 +10,7 @@ export default function PurchaseCompleted(){
             </div>
             <h1>Purchase Completed</h1>
             <p>Please check your email for details concerning this transaction</p>
-            <Link to="/"><h3>Return Home</h3></Link>
+            <Link to="/assessment-task"><h3>Return Home</h3></Link>
         </div>       
     )
 }

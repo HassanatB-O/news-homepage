@@ -7,18 +7,18 @@ import PurchaseCompleted from './Successful';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <BrowserRouter>
         <div className='container'>
           <Routes>
-            <Route path='/' exact element={<Personal/>}/>
+            <Route path='/assessment-task' exact element={<Personal/>}/>
             <Route path='/billing' exact element={<Billing/>}/>
             <Route path='/payment' exact element={<CompletePurchase/>}/>
             <Route path='/completed' exact element={<PurchaseCompleted/>}/>
           </Routes>
         </div>
-      </BrowserRouter>
     </div>
+    </BrowserRouter>
   );
 }
 
