@@ -1,0 +1,177 @@
+@use 'components/color';
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
+
+$displayFlex: flex;
+$marginAuto: auto;
+$transform-text: uppercase;
+$size: 1.3rem;
+$cursor: pointer;
+$fullwidth: 100%;
+$middle: middle;
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.logo{
+    display: $displayFlex;
+}
+.Home.logo{
+    margin-bottom: calc($size * 5);
+}
+h1{
+    color: color.$colorblue;
+    font-weight: 700;
+    font-size: calc($size * 3);
+    margin: .3em 0;
+}
+.Home{
+    display: $displayFlex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'AvenirNext LT Pro Regular', 'AvenirNext LT Pro Regular';
+}
+.container{
+    padding: $size calc($size * 5);
+    margin: $marginAuto;
+    width: $fullwidth;
+}
+.sign-in{
+    display: grid;
+    grid-gap: calc($size * 3);
+    grid-template-columns: 1fr 1fr;
+}
+.sign-in-img{
+    max-width: $fullwidth;
+    height: 600px;
+}
+.info{
+    font-size: calc($size * 1.2);
+    color: color.$colorgrey;
+    margin-bottom: 3rem;
+}
+input:focus{
+    outline: none;
+}
+input[type=email], input[type=password]{
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    padding: $size;
+    border-radius: 5px;
+    width: $fullwidth;
+    margin: $size 0;
+    cursor: $cursor;
+}
+::placeholder{
+    color: color.$colorgrey;
+    font-size: $size ;
+    opacity: .7;
+}
+h3{
+    color: color.$colorgreen;
+    text-transform: $transform-text;
+    cursor: $cursor;
+    margin:  calc($size * 1.5) 0;
+}
+.log-in-btn{
+    background-color: color.$colorgreen;
+    width: 100%;
+    padding: calc($size / 1.2);
+    border: none;
+    text-transform: $transform-text;
+    font-size: calc($size * 1.2);
+    border-radius: calc($size / 2);
+    color: #FFFFFF;
+    cursor: $cursor;
+}
+// Nav Bar
+nav{
+    display: $displayFlex;
+    justify-content: space-between;
+    align-items: center !important;
+    padding: $size calc($size * 2);
+    background: #FFFFFF;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+.search-btn{
+    background-color: #39CDCC;
+    border: none;
+    padding: $size;
+    border-radius: 0 8px 8px 0;
+    vertical-align: $middle;
+    cursor: $cursor;
+}
+.search-bar{
+    border: 2px solid rgba(84, 95, 125, 0.15);
+    padding: $size;
+    border-radius: 5px 0  0 5px;
+    width: 350px;
+    vertical-align: $middle;
+    cursor: $cursor;
+}
+nav p{
+    color: color.$colorblue;
+    font-size: calc($size * 1.2);
+}
+.nav--end{
+    display: $displayFlex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+.profile-img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.hamburger-div{
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+// Nav Bar
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+    .nav--end{
+       width: auto;
+    }
+    .mobile{
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .container{
+        padding: $size * 2;
+    }
+    .sign-in-img{
+        height: auto;
+    }
+    .logo{
+        margin-bottom: 2em;
+    }
+    h1{
+        font-size: calc($size * 2);
+    }
+    .sign-in{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .search-div{
+        display: none;
+    }
+    .nav--end{
+        display: none;
+    }
+    .logo{
+        margin-bottom: 0;
+    }
+    .mobile{
+        margin-left: 12px;
+    }
+    .hamburger-div{
+        display: block;
+    }
+}

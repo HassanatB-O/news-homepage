@@ -1,0 +1,75 @@
+
+@use '/src/components/color';
+$none: none;
+$displayFlex: flex;
+$size: 1rem;
+
+
+.side--nav{
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+    padding: $size 0;
+    font-family: 'Work Sans', sans-serif;
+}
+.side--div{
+    display: $displayFlex;
+    margin: calc($size / 2) 0;
+    align-items: center;
+    padding: $size calc($size * 3);
+    opacity: .7;
+    cursor: pointer;
+    border-left: 6px solid transparent;
+}
+.section--divider{
+    color: color.$colorgrey;
+    font-weight: 600;
+    margin: $size 0;
+    margin-left: $size * 3;
+    font-size: 18px;
+}
+.side--div:hover{
+    background-color: rgba(57, 205, 204, 0.06);
+    color: color.$colorblue;
+    border-left: 6px solid color.$colorgreen;
+    font-weight: 600;
+    opacity: 1;
+}
+.side--div:active, .side--div:focus{
+    background-color: rgba(57, 205, 204, 0.06);
+    color: color.$colorblue;
+    border-left: 6px solid color.$colorgreen;
+    font-weight: 600;
+    opacity: 1;
+}
+.side--div p{
+    color: color.$colorblue;
+    font-size: calc($size * 1.5);
+    text-transform: capitalize;
+    margin-left: $size;
+    opacity: .6;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    filter: invert(21%) sepia(41%) saturate(1706%) hue-rotate(194deg) brightness(94%) contrast(95%);
+}
+.no-filter{
+    filter: $none;
+}
+
+@media screen and (max-width: 800px){       
+    .side--nav{
+        position: absolute;
+        right: 0%;
+        z-index: 50;
+        width: 70%;
+        transition: 0.3s;
+    }
+    .side--div p{
+        font-size: calc($size * 1.2);
+    }
+    .side--nav img{
+        width: 20px;
+        height: 20px;
+    }
+}

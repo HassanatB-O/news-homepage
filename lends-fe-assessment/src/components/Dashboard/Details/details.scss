@@ -1,0 +1,160 @@
+@use '/src/components/color';
+
+$size: 1rem;
+
+.back-btn{
+    padding: $size;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: color.$colorblue;
+    font-size: $size * 1.2;
+    letter-spacing: 2px;
+    border: 1px solid transparent;
+}
+.details{
+    color: color.$colorblue;
+}
+.back-btn:hover{
+    border: 1px solid color.$colorblue;
+}
+.black-btn{
+    padding: $size;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid color.$colorbrightred;
+    font-weight: 600;
+    border-radius: calc($size / 2);
+    color: color.$colorred;
+    text-transform: uppercase;
+    font-size: $size * 1.2;
+    letter-spacing: 1px;
+}
+.black-btn:hover, .active-btn:hover{
+    background-color: #FFFFFF;
+}
+.active-btn{
+    padding: $size;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid color.$colorgreen;
+    color: color.$colorgreen;
+    font-weight: 600;
+    border-radius: calc($size / 2);
+    text-transform: uppercase;
+    font-size: $size * 1.2;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+.profile--section{
+    padding: 2rem 3rem;
+    clear: right;
+}
+.avatar{
+    border-radius: 50%;
+}
+.profile--details{
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 0 calc($size * 2);
+    padding-top: calc($size * 2);
+}
+h4{
+    font-weight: 500;
+    font-size: calc($size * 1.5);
+    margin: .8rem 0;
+}
+.section-slct{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: calc($size * 2);
+    font-size: calc($size * 1.2);
+}
+.section-slct p{
+    cursor: pointer;
+    border-bottom:  2px solid transparent;
+    font-weight: 500;
+}
+.section-slct p:hover{
+    color: color.$colorgreen;
+    border-bottom:  2px solid color.$colorgreen;
+}
+.section-slct p:active, .section-slct p:focus{
+    border-bottom:  2px solid color.$colorgreen;
+}
+aside h3{
+    font-weight: 400;
+    margin: 10px 0;
+}
+aside p{
+    font-weight: 600;
+    font-size: calc($size * 1.2);
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: calc($size * 1.5);
+    padding-bottom: $size * 2;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.profile{
+    display: flex;
+    align-items: center
+}
+.name--id{
+    padding: 0 1.5rem; 
+    border-right: 1px solid rgba(0, 0, 0, 0.2)
+}
+.bank--details{
+    padding: 0 1.5rem; 
+    border-left: 1px solid rgba(0, 0, 0, 0.2)
+}
+.buttons{
+    float: right;
+}
+@media screen and (min-width: 801px) and (max-width: 1200px){
+    .search-bar{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .details h2{
+        font-size: calc($size * 1.2);
+        padding: 0 $size;
+    }
+    .grid{
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: $size *2;
+    }
+    .section-slct{
+        display: none;
+    }
+    .profile--details{
+        padding: $size;
+    }
+    .profile{
+        flex-direction: column;
+        text-align: center;
+        border: none;
+    }
+    .profile--section{
+        padding: $size;
+    }
+    .name--id, .bank--details{
+        border-left: none;
+        border-right: none;
+    }
+    .black-btn, .active-btn{
+        font-size: $size;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        padding: $size;
+        float: none;
+    }
+}
